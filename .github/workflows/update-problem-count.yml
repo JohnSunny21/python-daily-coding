@@ -1,0 +1,31 @@
+name: Update Problem Count Badge
+
+on:
+  push:
+    paths:
+      - '**.py'
+  workflow_dispatch:
+
+jobs:
+  update-badge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Count Python solution files
+        run: |
+          count=$(find . -maxdepth 1 -name "*.py" | wc -l)
+          echo "{ \"problems\": $count }" > problem-count.json
+
+      - name: Commit updated badge data
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add problem-count.json
+          git commit -m "Update problem count badge" || echo "No changes to commit"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.8.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
