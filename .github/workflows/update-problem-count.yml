@@ -6,16 +6,20 @@ on:
       - "**.py"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   update-badge:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Count Python solution files
         run: |
-          count=$(find . -maxdepth 1 -name "*.py" | wc -l)
+          count=$(find . -type f -name "*.py" ! -path "./.github/*" ! -name "test_*.py" ! -name "*Test.py" | wc -l)
           echo "{ \"problems\": $count }" > problem-count.json
 
       - name: Commit updated badge data
@@ -29,5 +33,3 @@ jobs:
         uses: ad-m/github-push-action@v0.8.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-permissions:
-  contents: write
