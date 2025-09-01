@@ -47,3 +47,4 @@ if __name__ == "__main__":
 
     # print(tribonacci_sequence([0, 0, 1], 20))
     print(tribonacci_sequence([21,32,43],1))
+    print(tribonacci_sequence([1, 2, 3]),5)
