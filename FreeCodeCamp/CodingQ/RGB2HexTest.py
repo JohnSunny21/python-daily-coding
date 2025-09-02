@@ -15,5 +15,6 @@ class RGB2HexTest(unittest.TestCase):
     def test4(self):
         self.assertEqual(rgb_to_hex("rgb(79,123,201)"),"#4f7bc9")
 
+
 if __name__ == "__main__":
     unittest.main()

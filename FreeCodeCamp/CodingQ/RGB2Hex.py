@@ -17,5 +17,6 @@ def rgb_to_hex(rgb):
 
 if __name__ == "__main__":
     print(rgb_to_hex("rgb(1,11,111)"))
+    print(rgb_to_hex("rgb(2,22, 223)"))
 
     
