@@ -28,5 +28,6 @@ class PangramTest(unittest.TestCase):
     def test8(self):
         self.assertEqual(is_pangram_withEdgeCase("The quick brown fox jumps over the lazy dog.","abcdefghijklmnopqrstuvwxyz"),True)
 
+
 if __name__ == "__main__":
     unittest.main()
