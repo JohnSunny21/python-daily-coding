@@ -4,7 +4,6 @@ from vowelRepeater import repeat_vowels
 
 class vowelRepeaterTest(unittest.TestCase):
 
-
     def test1(self):
         self.assertEqual(repeat_vowels("hello world"),"helloo wooorld")
 
