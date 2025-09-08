@@ -1,5 +1,5 @@
 import unittest
-from AcronymBuiler import build_acronym
+from FreeCodeCamp.CodingQ.AcronymBuilder import build_acronym
 
 class AcronymBuilerTest(unittest.TestCase):
 
