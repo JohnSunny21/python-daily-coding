@@ -54,6 +54,7 @@ def speed_check(speed_mph, speed_limit_kph):
         return "Ticket"
     
 
+
 if __name__ == "__main__":
     print(speed_check(30, 50))   # Not Speeding (30 mph ≈ 48.28 kph)
     print(speed_check(35, 50))   # Warning (35 mph ≈ 56.33 kph, ~6.33 over → Ticket actually)
