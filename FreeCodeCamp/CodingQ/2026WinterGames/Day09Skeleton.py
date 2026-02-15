@@ -204,7 +204,7 @@ def get_difficulty(track):
         return "Medium"
     else:
         return "Hard"
-        
+          
 
 if __name__ == "__main__":
     print(get_difficulty_one("SL"))
