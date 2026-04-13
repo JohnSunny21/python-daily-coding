@@ -50,7 +50,7 @@ def get_initials_second(name):
     initials = [p[0].upper() for p in parts]
     return ".".join(initials) + "."
 
-
+ 
 from utils.benchmark import benchmark
 if __name__ == "__main__":
 
