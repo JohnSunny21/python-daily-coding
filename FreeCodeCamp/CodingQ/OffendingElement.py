@@ -30,7 +30,7 @@ class OffendingElementTest(unittest.TestCase):
     def test5(self):
         self.assertEqual(find_offender([5, 18, 24, 33, 40, 55, 15, 68, 84, 91]), 6)
 
-
+ 
 TESTCASES = [
     (([1, 6, 2, 3, 4, 5],), 1),
     (([1, 2, 3, 5, 4, 5],), 3),
