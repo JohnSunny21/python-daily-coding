@@ -169,7 +169,7 @@ def is_mirror_image_opt(s1, s2):
         else:
             return None     # Invalid characters
         
-
+ 
     mirrored = []
     for ch in reversed(s1):
         mc = mirror_char(ch)
