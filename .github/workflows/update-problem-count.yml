@@ -1,4 +1,4 @@
-name: Update Problem Count Badge
+name: Update Problem Count Badge (Python)
 
 on:
   push:
