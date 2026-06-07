@@ -37,7 +37,7 @@ TESTCASES = [
     ((20, [13, 9, 12, 10, 8],), 1)
 ]
 
-
+  
 
 
 def last_load_date(scoops, usage):
