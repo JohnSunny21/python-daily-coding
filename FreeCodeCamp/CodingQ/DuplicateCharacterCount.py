@@ -14,7 +14,37 @@ import unittest
 class DuplicateCharacterCountTest(unittest.TestCase):
 
 
-    pass
+    def test1(self):
+        self.assertEqual(duplicate_character_count("aloha", "hei"), 1)
+
+    def test2(self):
+        self.assertEqual(duplicate_character_count("jambo", "bonjour"), 4)
+
+    def test3(self):
+        self.assertEqual(duplicate_character_count("hello", "hola"), 3)
+
+    def test4(self):
+        self.assertEqual(duplicate_character_count("ola", "hej"), 0)
+
+    def test5(self):
+        self.assertEqual(duplicate_character_count("ciao", "konnichiwa"), 5)
+
+    def test6(self):
+        self.assertEqual(duplicate_character_count("merhaba", "xin chao"), 2)
+
+    def test7(self):
+        self.assertEqual(duplicate_character_count("hello world", "hello to everyone around the world"), 26)
+
+
+TESTCASES = [
+    (("aloha", "hei",), 1),
+    (("jambo", "bonjour",), 4),
+    (("hello", "hola",), 3),
+    (("ola", "hej",), 0),
+    (("ciao", "konnichiwa",), 5),
+    (("merhaba", "xin chao",), 2),
+    (("hello world", "hello to everyone around the world",), 26)
+]
 
 
 
